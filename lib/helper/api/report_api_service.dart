@@ -4,7 +4,7 @@ import 'package:ev/utils/preference_utils.dart';
 import 'package:http/http.dart' as http;
 
 class ReportApiService {
-  static const String _baseUrl = "http://52.66.201.202/api/v1/report/add_report";
+  static const String _baseUrl = "http://4.188.84.32/api/v1/report/add_report";
 
   static Future<ReportResponse?> addReport({
     required int driverId,

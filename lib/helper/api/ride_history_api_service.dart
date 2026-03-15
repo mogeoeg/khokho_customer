@@ -5,7 +5,7 @@ import 'package:ev/helper/model/ride_history_model.dart';
 import 'package:ev/utils/preference_utils.dart';
 
 class RideHistoryApiService {
-  static const String baseUrl = "http://52.66.201.202/api/v1/driver/ride_history/";
+  static const String baseUrl = "http://4.188.84.32/api/v1/driver/ride_history/";
 
   static Future<List<RideHistoryModel>> fetchRideHistory({
     required String fromDate,

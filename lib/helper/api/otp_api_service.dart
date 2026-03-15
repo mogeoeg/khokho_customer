@@ -6,7 +6,7 @@ import 'package:http/http.dart' as http;
 import '../model/login_user_model.dart';
 
 class OtpAuthApiService {
-  static const baseUrl = 'http://52.66.201.202/api/v1/users';
+  static const baseUrl = 'http://4.188.84.32/api/v1/users';
 
   static Future<Map<String, dynamic>> verifyOtp({
     required String otp,

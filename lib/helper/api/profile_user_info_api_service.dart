@@ -4,7 +4,7 @@
 // import 'package:ev/utils/preference_utils.dart';
 
 // class UserApiService {
-//   static const String baseUrl = "http://52.66.201.202/api/v1/users";
+//   static const String baseUrl = "http://4.188.84.32/api/v1/users";
 
 //   static Future<UserModel?> getUser() async {
 //     final token = PreferenceUtils.getUserToken();
@@ -60,7 +60,7 @@ class UserApiServiceHttp {
     if (token.isEmpty) throw Exception("No token found");
 
     final url = Uri.parse(
-        "http://52.66.201.202/api/v1/users/get_user_by_token/");
+        "http://4.188.84.32/api/v1/users/get_user_by_token/");
 
     try {
       final response = await http.get(

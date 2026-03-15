@@ -9,7 +9,7 @@ import 'package:ev/utils/preference_utils.dart';
 import 'package:http/http.dart' as http;
 
 class BannerApiService {
-  static const _url = 'http://52.66.201.202/api/v1/banners/get_banner/';
+  static const _url = 'http://4.188.84.32/api/v1/banners/get_banner/';
 
   static Future<List<BannerModel>> fetchBanners() async {
     final token = PreferenceUtils.getUserToken();

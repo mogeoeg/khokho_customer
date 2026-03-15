@@ -9,7 +9,7 @@
 
 // class ServiceApi {
 //   static const String _baseUrl =
-//       'http://52.66.201.202/api/v1/service/get_all_service/?page=1&size=50';
+//       'http://4.188.84.32/api/v1/service/get_all_service/?page=1&size=50';
 
 //   static Future<List<ServiceModel>> fetchServices() async {
 //     final token = PreferenceUtils.getUserToken();
@@ -63,7 +63,7 @@ import 'package:ev/utils/preference_utils.dart';
 import 'package:http/http.dart' as http;
 
 class ServiceApi {
-  static const String _baseUrl = 'http://52.66.201.202/api/v1/service/get_all_service/';
+  static const String _baseUrl = 'http://4.188.84.32/api/v1/service/get_all_service/';
 
   static Future<List<ServiceModel>> fetchServices({int page = 1, int size = 50}) async {
     final token = PreferenceUtils.getUserToken();

@@ -8,7 +8,7 @@ import 'package:http/http.dart' as http;
 
 class OrderApiService {
   static const String _baseUrl =
-      'http://52.66.201.202/api/v1/order/create_order/';
+      'http://4.188.84.32/api/v1/order/create_order/';
 
   //import 'package:ev/helper/model/fetch_order_model.dart';
 

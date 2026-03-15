@@ -8,7 +8,7 @@ import 'package:ev/utils/preference_utils.dart';
 class LocationApi {
   final Dio _dio = Dio(
     BaseOptions(
-      baseUrl: "http://52.66.201.202/api/v1/location",
+      baseUrl: "http://4.188.84.32/api/v1/location",
       headers: {
         "accept": "application/json",
         "Authorization": "Bearer ${PreferenceUtils.getUserToken()}",

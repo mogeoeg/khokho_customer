@@ -8,7 +8,7 @@ import 'package:ev/helper/model/fetch_order_model.dart';
 
 class FetchOrderApiService {
   static const String _baseUrl =
-      'http://52.66.201.202/api/v1/order/get_all_order_by_userid/?page=1&size=50';
+      'http://4.188.84.32/api/v1/order/get_all_order_by_userid/?page=1&size=50';
 
   static Future<List<FetchOrderModel>> fetchOrders() async {
     final token = PreferenceUtils.getUserToken();
