@@ -1,4 +1,4 @@
- // ignore_for_file: avoid_print
+// ignore_for_file: avoid_print
 
 // ✅ API: order_api_service.dart
 import 'dart:convert';
@@ -8,7 +8,7 @@ import 'package:ev/helper/model/fetch_order_model.dart';
 
 class FetchOrderApiService {
   static const String _baseUrl =
-      'http://4.188.84.32/api/v1/order/get_all_order_by_userid/?page=1&size=50';
+      'http://13.235.24.96:8000/api/v1/order/get_all_order_by_userid/?page=1&size=50';
 
   static Future<List<FetchOrderModel>> fetchOrders() async {
     final token = PreferenceUtils.getUserToken();

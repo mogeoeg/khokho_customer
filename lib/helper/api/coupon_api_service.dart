@@ -7,7 +7,7 @@ import 'package:http/http.dart' as http;
 
 class CouponService {
   static const String baseUrl =
-      "http://4.188.84.32/api/v1/coupen/get_all_coupen/?page=1&size=50";
+      "http://13.235.24.96:8000/api/v1/coupen/get_all_coupen/?page=1&size=50";
   // static const String token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiZXhwIjoxNzg0NTUxMjM5fQ.HC7PeyVsNlcCW6annNHzFCknZbD5Oi94EjqcHUMKnWE";
 
   static Future<List<CouponModel>> fetchCoupons() async {

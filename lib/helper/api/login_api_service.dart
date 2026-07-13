@@ -5,7 +5,7 @@
 // import 'package:http/http.dart' as http;
 
 // class LoginAuthProvider {
-//   final String baseUrl = 'http://4.188.84.32';
+//   final String baseUrl = 'http://13.235.24.96:8000';
 
 //   Future<LoginUserModel?> loginWithEmail(String email) async {
 //     final url = Uri.parse('$baseUrl/api/v1/users/user_login/?email=$email');
@@ -35,9 +35,6 @@
 //   }
 // }
 
-
-
-
 // ignore_for_file: avoid_print
 
 import 'dart:convert';
@@ -45,10 +42,12 @@ import 'package:ev/helper/model/login_user_model.dart';
 import 'package:http/http.dart' as http;
 
 class LoginAuthProvider {
-  final String baseUrl = 'http://4.188.84.32';
+  final String baseUrl = 'http://13.235.24.96:8000';
 
   Future<LoginUserModel?> loginWithPhone(String phoneNumber) async {
-    final url = Uri.parse('$baseUrl/api/v1/users/user_login/?phone_number=$phoneNumber');
+    final url = Uri.parse(
+      '$baseUrl/api/v1/users/user_login/?phone_number=$phoneNumber',
+    );
 
     try {
       final response = await http.post(

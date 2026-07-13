@@ -6,7 +6,7 @@
 
 // class UserApiService {
 //   Future<bool> updateUser(UpdateUserModel model, int userId, String token) async {
-//     final url = Uri.parse('http://4.188.84.32/api/v1/users/update_user/?user_id=$userId');
+//     final url = Uri.parse('http://13.235.24.96:8000/api/v1/users/update_user/?user_id=$userId');
 
 //     try {
 //       final response = await http.patch(
@@ -38,7 +38,7 @@ import 'package:ev/utils/preference_utils.dart';
 import 'package:http/http.dart' as http;
 
 class UserService {
-  static const String baseUrl = "http://4.188.84.32/api/v1/users";
+  static const String baseUrl = "http://13.235.24.96:8000/api/v1/users";
 
   static Future<UserModel?> updateUser({
     required int userId,

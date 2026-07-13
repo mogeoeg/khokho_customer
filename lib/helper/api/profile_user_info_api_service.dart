@@ -4,7 +4,7 @@
 // import 'package:ev/utils/preference_utils.dart';
 
 // class UserApiService {
-//   static const String baseUrl = "http://4.188.84.32/api/v1/users";
+//   static const String baseUrl = "http://13.235.24.96:8000/api/v1/users";
 
 //   static Future<UserModel?> getUser() async {
 //     final token = PreferenceUtils.getUserToken();
@@ -45,8 +45,6 @@
 //   }
 // }
 
-
-
 // services/user_api_service_http.dart
 import 'dart:convert';
 import 'package:ev/helper/model/profile_user_info_model.dart';
@@ -60,7 +58,8 @@ class UserApiServiceHttp {
     if (token.isEmpty) throw Exception("No token found");
 
     final url = Uri.parse(
-        "http://4.188.84.32/api/v1/users/get_user_by_token/");
+      "http://13.235.24.96:8000/api/v1/users/get_user_by_token/",
+    );
 
     try {
       final response = await http.get(
@@ -76,7 +75,8 @@ class UserApiServiceHttp {
         return ProfileUserModel.fromJson(data);
       } else {
         throw Exception(
-            "Failed to fetch user. Status code: ${response.statusCode}");
+          "Failed to fetch user. Status code: ${response.statusCode}",
+        );
       }
     } catch (e) {
       throw Exception("Error fetching user: $e");

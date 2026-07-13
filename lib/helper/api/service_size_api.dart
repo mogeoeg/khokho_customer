@@ -1,4 +1,3 @@
-
 // // ignore_for_file: avoid_print
 
 // // ✅ API CALL: service_size_api.dart
@@ -9,7 +8,7 @@
 
 // class ServiceApi {
 //   static const String _baseUrl =
-//       'http://4.188.84.32/api/v1/service/get_all_service/?page=1&size=50';
+//       'http://13.235.24.96:8000/api/v1/service/get_all_service/?page=1&size=50';
 
 //   static Future<List<ServiceModel>> fetchServices() async {
 //     final token = PreferenceUtils.getUserToken();
@@ -47,13 +46,6 @@
 //   }
 // }
 
-
-
-
-
-
-
-
 // ignore_for_file: avoid_print
 
 // ✅ API CALL: service_size_api.dart
@@ -63,9 +55,13 @@ import 'package:ev/utils/preference_utils.dart';
 import 'package:http/http.dart' as http;
 
 class ServiceApi {
-  static const String _baseUrl = 'http://4.188.84.32/api/v1/service/get_all_service/';
+  static const String _baseUrl =
+      'http://13.235.24.96:8000/api/v1/service/get_all_service/';
 
-  static Future<List<ServiceModel>> fetchServices({int page = 1, int size = 50}) async {
+  static Future<List<ServiceModel>> fetchServices({
+    int page = 1,
+    int size = 50,
+  }) async {
     final token = PreferenceUtils.getUserToken();
 
     if (token.isEmpty) {

@@ -8,7 +8,7 @@ import 'package:ev/utils/preference_utils.dart';
 class LocationApi {
   final Dio _dio = Dio(
     BaseOptions(
-      baseUrl: "http://4.188.84.32/api/v1/location",
+      baseUrl: "http://13.235.24.96:8000/api/v1/location",
       headers: {
         "accept": "application/json",
         "Authorization": "Bearer ${PreferenceUtils.getUserToken()}",
@@ -31,7 +31,7 @@ class LocationApi {
 
       if (response.data['status'] == true) {
         final List<dynamic> data = response.data['data'];
-        return data.map((e) =>AddressLocation.fromJson(e)).toList();
+        return data.map((e) => AddressLocation.fromJson(e)).toList();
       } else {
         return [];
       }

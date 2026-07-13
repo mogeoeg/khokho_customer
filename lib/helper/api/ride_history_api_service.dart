@@ -5,7 +5,8 @@ import 'package:ev/helper/model/ride_history_model.dart';
 import 'package:ev/utils/preference_utils.dart';
 
 class RideHistoryApiService {
-  static const String baseUrl = "http://4.188.84.32/api/v1/driver/ride_history/";
+  static const String baseUrl =
+      "http://13.235.24.96:8000/api/v1/driver/ride_history/";
 
   static Future<List<RideHistoryModel>> fetchRideHistory({
     required String fromDate,
@@ -16,10 +17,7 @@ class RideHistoryApiService {
     final url = Uri.parse("$baseUrl?fromdate=$fromDate&todate=$toDate");
     final response = await http.get(
       url,
-      headers: {
-        "accept": "application/json",
-        "Authorization": "Bearer $token",
-      },
+      headers: {"accept": "application/json", "Authorization": "Bearer $token"},
     );
 
     if (response.statusCode == 200) {
@@ -27,7 +25,9 @@ class RideHistoryApiService {
       final List data = body['data']['all_order_history'];
       return data.map((e) => RideHistoryModel.fromJson(e)).toList();
     } else {
-      throw Exception("Failed to fetch ride history. Code: ${response.statusCode}");
+      throw Exception(
+        "Failed to fetch ride history. Code: ${response.statusCode}",
+      );
     }
   }
 }

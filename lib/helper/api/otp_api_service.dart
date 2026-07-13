@@ -6,7 +6,7 @@ import 'package:http/http.dart' as http;
 import '../model/login_user_model.dart';
 
 class OtpAuthApiService {
-  static const baseUrl = 'http://4.188.84.32/api/v1/users';
+  static const baseUrl = 'http://13.235.24.96:8000/api/v1/users';
 
   static Future<Map<String, dynamic>> verifyOtp({
     required String otp,
@@ -33,8 +33,10 @@ class OtpAuthApiService {
       };
     } else {
       print("❌ OTP Verification failed. Message: ${data['message']}");
-       ToastMessage.show("OTP Verification Failed. Please check your OTP and try again.", isSuccess: false);
-      
+      ToastMessage.show(
+        "OTP Verification Failed. Please check your OTP and try again.",
+        isSuccess: false,
+      );
 
       throw Exception('OTP Verification Failed');
     }
